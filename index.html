@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--aws sdk-->
+        <script src="script.js"></script>
+        <script src="amazon-cognito-identity.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+        /**
+         * id：#～属性をクリックすると、対応する関数を実行する。
+         */
+        $(function() {
+          $('#loginBtn').click(callCognito);
+        });
+
+        </script>
+
+        <title>login</title>
+    </head>
+    <body class="m-5">
+      <div class="form-group">
+        <label class="col-sm-2">ID : </label>
+        <input class="form-control" type="text" id="idTxt" value=''>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2">PW : </label>
+        <input class="form-control" type="password" id="pwTxt"value=''>
+      </div>
+
+      <div class="form-group">
+        <button type="button" id="loginBtn" class="btn btn-lg btn-primary btn-block">Get id token</button>
+      </div>
+
+      <div class="form-group">
+        <textarea disabled class="form-control" id="result" rows="5" placeholder="idトークン"></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="form-control" id="message"></p>
+      </div>
+
+    </body>
+</html>
